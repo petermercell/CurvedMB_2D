@@ -1,0 +1,2065 @@
+#! C:/Program Files/Nuke15.1v3/nuke-15.1.3.dll -nx
+version 15.1 v3
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="-1" y="-8" w="2560" h="1369" maximized="1" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="1897" stretch="1"/>
+            <splitter orientation="2">
+                <split size="779"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="548"/>
+                <dock id="" activePageId="DAG.1" focus="true">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+                <page id="Scenegraph.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/Users/WORKSTATION/Desktop/curvedMBsetup.v002.nk
+ frame 10
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ monitorOutLUT rec709
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+Transform {
+ inputs 0
+ translate {{curve x1 -908 x10 -538 x20 -386 -132 34 252 428 590 746 916 1106} {curve x1 8 x10 380 x20 24 346 2 340 20 308 36 324 36}}
+ center {1024 778}
+ name Transform28
+ xpos -56
+ ypos 291
+}
+Reformat {
+ inputs 0
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ name Reformat1
+ xpos 148
+ ypos -360
+}
+Roto {
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097152}
+    {t x44800000 x44428000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Ellipse1 512 bezier
+     {{cc
+       {f 8192}
+       {px 1
+        {xc1802140 0}
+        {x446ec000 x443c0000}
+        {x41802140 0}
+        {0 xc1802140}
+        {x44760000 x44434000}
+        {0 x41802140}
+        {x41802140 0}
+        {x446ec000 x444a8000}
+        {xc1802140 0}
+        {0 x41802140}
+        {x44678000 x44434000}
+        {0 xc1802140}}}
+      {cc
+       {f 8192}
+       {p
+        {{{1 xc1802140}}
+      {{1 0}}}
+        {{{1 0}}
+      {{1 0}}}
+        {{{1 x41802140}}
+      {{1 0}}}
+        {{{1 0}}
+      {{1 xc1802140}}}
+        {{{1 0}}
+      {{1 0}}}
+        {{{1 0}}
+      {{1 x41802140}}}
+        {{{1 x41802140}}
+      {{1 0}}}
+        {{{1 0}}
+      {{1 0}}}
+        {{{1 xc1802140}}
+      {{1 0}}}
+        {{{1 0}}
+      {{1 x41802140}}}
+        {{{1 0}}
+      {{1 0}}}
+        {{{1 0}}
+      {{1 xc1802140}}}}}}
+     {tx 1 x446ec000 x44434000}
+     {a osw x41200000 osf 0 str 1 spx x44800000 spy x44428000 sb 1 tt x40e00000}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 tt 7 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {1024 778}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ motionblur_shutter_offset_type centred
+ source_black_outside true
+ name Roto6
+ xpos 148
+ ypos -317
+}
+Transform {
+ translate {68 -2}
+ center {1024 778}
+ name Centered5
+ xpos 148
+ ypos -278
+}
+Transform {
+ scale 0.25
+ center {1024 778}
+ name Transform29
+ xpos 148
+ ypos -244
+}
+Transform {
+ translate {{curve x1 -908 x10 -538 x20 -386 -132 34 252 428 590 746 916 1106} {curve x1 8 x10 380 x20 24 346 2 340 20 308 36 324 36}}
+ center {1024 778}
+ name Transform30
+ xpos 148
+ ypos -71
+}
+AdjBBox {
+ numpixels 100
+ name AdjBBox7
+ xpos 148
+ ypos 97
+}
+MotionBlur2D {
+ inputs 2
+ shutteroffset centred
+ name MotionBlur2D17
+ xpos 148
+ ypos 291
+}
+Dot {
+ name Dot3
+ xpos 182
+ ypos 582
+}
+set Nceec7400 [stack 0]
+Dot {
+ name Dot2
+ xpos 377
+ ypos 582
+}
+set Nc7a08400 [stack 0]
+VectorBlur2 {
+ uv motion
+ blur_type uniform
+ scale 4
+ name VectorBlur1
+ xpos 586
+ ypos 573
+}
+push $Nceec7400
+Dot {
+ name Dot1
+ xpos -4
+ ypos 582
+}
+Group {
+ name MB_2D_CURVED_1FRAME_
+ xpos -38
+ ypos 771
+ addUserKnob {20 User l MB_2D_CURVED_1FRAME_}
+ addUserKnob {26 ""}
+ addUserKnob {41 value l Multiply T Multiply24.value}
+ addUserKnob {26 ""}
+ addUserKnob {26 _1 l "" +STARTLINE T "MB_2D_CURVED_1FRAME by Peter Mercell\n\nSlow, New VectorBlur / Edge Problems"}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 826
+  ypos 195
+ }
+ Dot {
+  name Dot8
+  xpos 860
+  ypos 235
+ }
+set Nc7b5a000 [stack 0]
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.5
+  time ""
+  name TimeOffset1
+  xpos 1834
+  ypos 353
+ }
+push $Nc7b5a000
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge9
+  xpos 1834
+  ypos 441
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply3
+  xpos 1833
+  ypos 562
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset 0.5
+  blur_inside false
+  name VectorBlur16
+  xpos 1833
+  ypos 635
+ }
+push $Nc7b5a000
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.5
+  time ""
+  name TimeOffset2
+  xpos -208
+  ypos 370
+ }
+push $Nc7b5a000
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge11
+  xpos -208
+  ypos 447
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply15
+  xpos -205
+  ypos 556
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset -1.5
+  blur_inside false
+  name VectorBlur18
+  xpos -205
+  ypos 619
+ }
+push $Nc7b5a000
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.4
+  time ""
+  name TimeOffset3
+  xpos 1620
+  ypos 359
+ }
+push $Nc7b5a000
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge16
+  xpos 1620
+  ypos 444
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply16
+  xpos 1635
+  ypos 550
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset 0.3
+  blur_inside false
+  name VectorBlur19
+  xpos 1635
+  ypos 625
+ }
+push $Nc7b5a000
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.4
+  time ""
+  name TimeOffset4
+  xpos 60
+  ypos 359
+ }
+push $Nc7b5a000
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge17
+  xpos 60
+  ypos 440
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply17
+  xpos 60
+  ypos 549
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset -1.3
+  blur_inside false
+  name VectorBlur20
+  xpos 60
+  ypos 625
+ }
+push $Nc7b5a000
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.3
+  time ""
+  name TimeOffset5
+  xpos 1425
+  ypos 345
+ }
+push $Nc7b5a000
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge18
+  xpos 1425
+  ypos 433
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply18
+  xpos 1450
+  ypos 549
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset 0.1
+  blur_inside false
+  name VectorBlur21
+  xpos 1450
+  ypos 613
+ }
+push $Nc7b5a000
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.3
+  time ""
+  name TimeOffset6
+  xpos 256
+  ypos 356
+ }
+push $Nc7b5a000
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge19
+  xpos 256
+  ypos 435
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply19
+  xpos 252
+  ypos 559
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset -1.1
+  blur_inside false
+  name VectorBlur22
+  xpos 252
+  ypos 616
+ }
+push $Nc7b5a000
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.2
+  time ""
+  name TimeOffset7
+  xpos 1239
+  ypos 341
+ }
+push $Nc7b5a000
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge20
+  xpos 1239
+  ypos 426
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply20
+  xpos 1255
+  ypos 544
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset -0.1
+  blur_inside false
+  name VectorBlur23
+  xpos 1255
+  ypos 609
+ }
+push $Nc7b5a000
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.2
+  time ""
+  name TimeOffset8
+  xpos 423
+  ypos 352
+ }
+push $Nc7b5a000
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge21
+  xpos 423
+  ypos 426
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply21
+  xpos 418
+  ypos 543
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset -0.9
+  blur_inside false
+  name VectorBlur24
+  xpos 418
+  ypos 617
+ }
+push $Nc7b5a000
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.1
+  time ""
+  name TimeOffset9
+  xpos 1027
+  ypos 328
+ }
+push $Nc7b5a000
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge22
+  xpos 1027
+  ypos 411
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply22
+  xpos 1036
+  ypos 540
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset -0.3
+  blur_inside false
+  name VectorBlur25
+  xpos 1036
+  ypos 636
+ }
+push 0
+push $Nc7b5a000
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.1
+  time ""
+  name TimeOffset10
+  xpos 577
+  ypos 352
+ }
+push $Nc7b5a000
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge23
+  xpos 577
+  ypos 422
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply23
+  xpos 577
+  ypos 536
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset -0.7
+  blur_inside false
+  name VectorBlur26
+  xpos 577
+  ypos 627
+ }
+push $Nc7b5a000
+ Multiply {
+  channels motion
+  value 4
+  name Multiply24
+  xpos 858
+  ypos 510
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale 0.1
+  blur_inside false
+  name VectorBlur27
+  xpos 858
+  ypos 632
+ }
+ Merge2 {
+  inputs 11+1
+  operation plus
+  also_merge motion
+  name Merge24
+  xpos 858
+  ypos 1011
+ }
+ Multiply {
+  value 0.090909
+  name Multiply25
+  xpos 858
+  ypos 1136
+ }
+ Remove {
+  operation keep
+  channels rgba
+  name Remove13
+  xpos 858
+  ypos 1265
+ }
+ Output {
+  name Output1
+  xpos 858
+  ypos 1346
+ }
+end_group
+Dot {
+ name Dot6
+ xpos -4
+ ypos 920
+}
+push $Nc7a08400
+Group {
+ name MB_2D_CURVED_1FRAME_1
+ xpos 343
+ ypos 771
+ addUserKnob {20 User l MB_2D_CURVED_1FRAME_}
+ addUserKnob {26 ""}
+ addUserKnob {41 value l Multiply T Multiply24.value}
+ addUserKnob {26 ""}
+ addUserKnob {26 _1 l "" +STARTLINE T "MB_2D_CURVED_1FRAME by Peter Mercell\n\nSlow Slow, Old VectorBlur / No Edge Problems"}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 826
+  ypos 75
+ }
+ Dot {
+  name Dot8
+  xpos 860
+  ypos 235
+ }
+set Nc7a08c00 [stack 0]
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.5
+  time ""
+  name TimeOffset1
+  xpos 1834
+  ypos 353
+ }
+push $Nc7a08c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge9
+  xpos 1834
+  ypos 427
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply3
+  xpos 1834
+  ypos 568
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset 0.5
+  name VectorBlur1
+  xpos 1854
+  ypos 940
+ }
+push $Nc7a08c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.5
+  time ""
+  name TimeOffset2
+  xpos -208
+  ypos 368
+ }
+push $Nc7a08c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge11
+  xpos -208
+  ypos 447
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply15
+  xpos -211
+  ypos 571
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset -1.5
+  name VectorBlur11
+  xpos -211
+  ypos 904
+ }
+push $Nc7a08c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.4
+  time ""
+  name TimeOffset3
+  xpos 1620
+  ypos 359
+ }
+push $Nc7a08c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge16
+  xpos 1620
+  ypos 438
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply16
+  xpos 1614
+  ypos 566
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset 0.3
+  name VectorBlur2
+  xpos 1662
+  ypos 926
+ }
+push $Nc7a08c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.4
+  time ""
+  name TimeOffset4
+  xpos 60
+  ypos 359
+ }
+push $Nc7a08c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge17
+  xpos 60
+  ypos 441
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply17
+  xpos 54
+  ypos 572
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset -1.3
+  name VectorBlur10
+  xpos 54
+  ypos 894
+ }
+push $Nc7a08c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.3
+  time ""
+  name TimeOffset5
+  xpos 1425
+  ypos 344
+ }
+push $Nc7a08c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge18
+  xpos 1425
+  ypos 433
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply18
+  xpos 1444
+  ypos 558
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset 0.1
+  name VectorBlur3
+  xpos 1464
+  ypos 930
+ }
+push $Nc7a08c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.3
+  time ""
+  name TimeOffset6
+  xpos 256
+  ypos 355
+ }
+push $Nc7a08c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge19
+  xpos 256
+  ypos 436
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply19
+  xpos 246
+  ypos 563
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset -1.1
+  name VectorBlur9
+  xpos 246
+  ypos 904
+ }
+push $Nc7a08c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.2
+  time ""
+  name TimeOffset7
+  xpos 1239
+  ypos 342
+ }
+push $Nc7a08c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge20
+  xpos 1239
+  ypos 411
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply20
+  xpos 1249
+  ypos 543
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset -0.1
+  name VectorBlur4
+  xpos 1268
+  ypos 940
+ }
+push $Nc7a08c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.2
+  time ""
+  name TimeOffset8
+  xpos 423
+  ypos 350
+ }
+push $Nc7a08c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge21
+  xpos 423
+  ypos 427
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply21
+  xpos 417
+  ypos 566
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset -0.9
+  name VectorBlur8
+  xpos 417
+  ypos 919
+ }
+push $Nc7a08c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.1
+  time ""
+  name TimeOffset9
+  xpos 1027
+  ypos 358
+ }
+push $Nc7a08c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge22
+  xpos 1027
+  ypos 391
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply22
+  xpos 1033
+  ypos 561
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset -0.3
+  name VectorBlur5
+  xpos 1049
+  ypos 933
+ }
+push 0
+push $Nc7a08c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.1
+  time ""
+  name TimeOffset10
+  xpos 577
+  ypos 352
+ }
+push $Nc7a08c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge23
+  xpos 577
+  ypos 422
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply23
+  xpos 571
+  ypos 552
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset -0.7
+  name VectorBlur7
+  xpos 571
+  ypos 911
+ }
+push $Nc7a08c00
+ Multiply {
+  channels motion
+  value 4
+  name Multiply24
+  xpos 826
+  ypos 737
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  name VectorBlur6
+  xpos 855
+  ypos 932
+ }
+ Merge2 {
+  inputs 11+1
+  operation plus
+  also_merge motion
+  name Merge24
+  xpos 855
+  ypos 1291
+ }
+ Multiply {
+  value 0.090909
+  name Multiply25
+  xpos 855
+  ypos 1414
+ }
+ Remove {
+  operation keep
+  channels rgba
+  name Remove13
+  xpos 855
+  ypos 1527
+ }
+ Output {
+  name Output1
+  xpos 855
+  ypos 1608
+ }
+end_group
+Dot {
+ name Dot4
+ xpos 377
+ ypos 920
+}
+Merge2 {
+ inputs 2
+ operation difference
+ name Merge1
+ xpos 177
+ ypos 917
+}
+Grade {
+ multiply 10
+ name Grade2
+ xpos 177
+ ypos 971
+}
+Dot {
+ name Dot7
+ xpos 211
+ ypos 1024
+}
+FrameHold {
+ firstFrame 96
+ name FrameHold2
+ xpos 370
+ ypos 1015
+}
+Transform {
+ inputs 0
+ rotate {{curve x1 0 x100 1000}}
+ center {1024 778}
+ name Transform1
+ xpos 887
+ ypos 274
+}
+CheckerBoard2 {
+ inputs 0
+ name CheckerBoard1
+ xpos 1053
+ ypos -335
+}
+Transform {
+ rotate {{curve x1 0 x100 1000}}
+ center {1024 778}
+ name Transform7
+ xpos 1053
+ ypos -71
+}
+AdjBBox {
+ numpixels 100
+ name AdjBBox1
+ xpos 1055
+ ypos 74
+}
+MotionBlur2D {
+ inputs 2
+ shutteroffset centred
+ name MotionBlur2D1
+ xpos 1055
+ ypos 274
+}
+Dot {
+ name Dot8
+ xpos 1089
+ ypos 598
+}
+set Nc52f3000 [stack 0]
+Dot {
+ name Dot9
+ xpos 903
+ ypos 598
+}
+Group {
+ name MB_2D_CURVED_1FRAME_2
+ xpos 869
+ ypos 794
+ addUserKnob {20 User l MB_2D_CURVED_1FRAME_}
+ addUserKnob {26 ""}
+ addUserKnob {41 value l Multiply T Multiply24.value}
+ addUserKnob {26 ""}
+ addUserKnob {26 _1 l "" +STARTLINE T "MB_2D_CURVED_1FRAME by Peter Mercell\n\nSlow, New VectorBlur / Edge Problems"}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 826
+  ypos 195
+ }
+ Dot {
+  name Dot8
+  xpos 860
+  ypos 235
+ }
+set Nc52f3c00 [stack 0]
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.5
+  time ""
+  name TimeOffset1
+  xpos 1834
+  ypos 353
+ }
+push $Nc52f3c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge9
+  xpos 1834
+  ypos 441
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply3
+  xpos 1833
+  ypos 562
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset 0.5
+  blur_inside false
+  name VectorBlur16
+  xpos 1833
+  ypos 635
+ }
+push $Nc52f3c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.5
+  time ""
+  name TimeOffset2
+  xpos -208
+  ypos 370
+ }
+push $Nc52f3c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge11
+  xpos -208
+  ypos 447
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply15
+  xpos -205
+  ypos 556
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset -1.5
+  blur_inside false
+  name VectorBlur18
+  xpos -205
+  ypos 619
+ }
+push $Nc52f3c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.4
+  time ""
+  name TimeOffset3
+  xpos 1620
+  ypos 359
+ }
+push $Nc52f3c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge16
+  xpos 1620
+  ypos 444
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply16
+  xpos 1635
+  ypos 550
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset 0.3
+  blur_inside false
+  name VectorBlur19
+  xpos 1635
+  ypos 625
+ }
+push $Nc52f3c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.4
+  time ""
+  name TimeOffset4
+  xpos 60
+  ypos 359
+ }
+push $Nc52f3c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge17
+  xpos 60
+  ypos 440
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply17
+  xpos 60
+  ypos 549
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset -1.3
+  blur_inside false
+  name VectorBlur20
+  xpos 60
+  ypos 625
+ }
+push $Nc52f3c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.3
+  time ""
+  name TimeOffset5
+  xpos 1425
+  ypos 345
+ }
+push $Nc52f3c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge18
+  xpos 1425
+  ypos 433
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply18
+  xpos 1450
+  ypos 549
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset 0.1
+  blur_inside false
+  name VectorBlur21
+  xpos 1450
+  ypos 613
+ }
+push $Nc52f3c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.3
+  time ""
+  name TimeOffset6
+  xpos 256
+  ypos 356
+ }
+push $Nc52f3c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge19
+  xpos 256
+  ypos 435
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply19
+  xpos 252
+  ypos 559
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset -1.1
+  blur_inside false
+  name VectorBlur22
+  xpos 252
+  ypos 616
+ }
+push $Nc52f3c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.2
+  time ""
+  name TimeOffset7
+  xpos 1239
+  ypos 341
+ }
+push $Nc52f3c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge20
+  xpos 1239
+  ypos 426
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply20
+  xpos 1255
+  ypos 544
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset -0.1
+  blur_inside false
+  name VectorBlur23
+  xpos 1255
+  ypos 609
+ }
+push $Nc52f3c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.2
+  time ""
+  name TimeOffset8
+  xpos 423
+  ypos 352
+ }
+push $Nc52f3c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge21
+  xpos 423
+  ypos 426
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply21
+  xpos 418
+  ypos 543
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset -0.9
+  blur_inside false
+  name VectorBlur24
+  xpos 418
+  ypos 617
+ }
+push $Nc52f3c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.1
+  time ""
+  name TimeOffset9
+  xpos 1027
+  ypos 328
+ }
+push $Nc52f3c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge22
+  xpos 1027
+  ypos 411
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply22
+  xpos 1036
+  ypos 540
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset -0.3
+  blur_inside false
+  name VectorBlur25
+  xpos 1036
+  ypos 636
+ }
+push 0
+push $Nc52f3c00
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.1
+  time ""
+  name TimeOffset10
+  xpos 577
+  ypos 352
+ }
+push $Nc52f3c00
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge23
+  xpos 577
+  ypos 422
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply23
+  xpos 577
+  ypos 536
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale {{parent.VectorBlur27.scale}}
+  offset -0.7
+  blur_inside false
+  name VectorBlur26
+  xpos 577
+  ypos 627
+ }
+push $Nc52f3c00
+ Multiply {
+  channels motion
+  value 4
+  name Multiply24
+  xpos 858
+  ypos 510
+ }
+ VectorBlur2 {
+  uv motion
+  blur_uv uniform
+  blur_type uniform
+  scale 0.1
+  blur_inside false
+  name VectorBlur27
+  xpos 858
+  ypos 632
+ }
+ Merge2 {
+  inputs 11+1
+  operation plus
+  also_merge motion
+  name Merge24
+  xpos 858
+  ypos 1011
+ }
+ Multiply {
+  value 0.090909
+  name Multiply25
+  xpos 858
+  ypos 1136
+ }
+ Remove {
+  operation keep
+  channels rgba
+  name Remove13
+  xpos 858
+  ypos 1265
+ }
+ Output {
+  name Output1
+  xpos 858
+  ypos 1346
+ }
+end_group
+Dot {
+ name Dot10
+ xpos 903
+ ypos 936
+}
+push $Nc52f3000
+Dot {
+ name Dot11
+ xpos 1284
+ ypos 598
+}
+Group {
+ name MB_2D_CURVED_1FRAME_3
+ xpos 1250
+ ypos 789
+ addUserKnob {20 User l MB_2D_CURVED_1FRAME_}
+ addUserKnob {26 ""}
+ addUserKnob {41 value l Multiply T Multiply24.value}
+ addUserKnob {26 ""}
+ addUserKnob {26 _1 l "" +STARTLINE T "MB_2D_CURVED_1FRAME by Peter Mercell\n\nSlow Slow, Old VectorBlur / No Edge Problems"}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 826
+  ypos 75
+ }
+ Dot {
+  name Dot8
+  xpos 860
+  ypos 235
+ }
+set Nc57ca800 [stack 0]
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.5
+  time ""
+  name TimeOffset1
+  xpos 1834
+  ypos 353
+ }
+push $Nc57ca800
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge9
+  xpos 1834
+  ypos 427
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply3
+  xpos 1834
+  ypos 568
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset 0.5
+  name VectorBlur1
+  xpos 1853
+  ypos 941
+ }
+push $Nc57ca800
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.5
+  time ""
+  name TimeOffset2
+  xpos -208
+  ypos 368
+ }
+push $Nc57ca800
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge11
+  xpos -208
+  ypos 447
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply15
+  xpos -211
+  ypos 571
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset -1.5
+  name VectorBlur11
+  xpos -211
+  ypos 904
+ }
+push $Nc57ca800
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.4
+  time ""
+  name TimeOffset3
+  xpos 1620
+  ypos 359
+ }
+push $Nc57ca800
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge16
+  xpos 1620
+  ypos 438
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply16
+  xpos 1614
+  ypos 566
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset 0.3
+  name VectorBlur2
+  xpos 1662
+  ypos 926
+ }
+push $Nc57ca800
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.4
+  time ""
+  name TimeOffset4
+  xpos 60
+  ypos 359
+ }
+push $Nc57ca800
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge17
+  xpos 60
+  ypos 441
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply17
+  xpos 54
+  ypos 572
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset -1.3
+  name VectorBlur10
+  xpos 54
+  ypos 894
+ }
+push $Nc57ca800
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.3
+  time ""
+  name TimeOffset5
+  xpos 1425
+  ypos 344
+ }
+push $Nc57ca800
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge18
+  xpos 1425
+  ypos 433
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply18
+  xpos 1444
+  ypos 558
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset 0.1
+  name VectorBlur3
+  xpos 1464
+  ypos 930
+ }
+push $Nc57ca800
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.3
+  time ""
+  name TimeOffset6
+  xpos 256
+  ypos 355
+ }
+push $Nc57ca800
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge19
+  xpos 256
+  ypos 436
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply19
+  xpos 246
+  ypos 563
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset -1.1
+  name VectorBlur9
+  xpos 246
+  ypos 904
+ }
+push $Nc57ca800
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.2
+  time ""
+  name TimeOffset7
+  xpos 1239
+  ypos 342
+ }
+push $Nc57ca800
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge20
+  xpos 1239
+  ypos 411
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply20
+  xpos 1249
+  ypos 543
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset -0.1
+  name VectorBlur4
+  xpos 1268
+  ypos 940
+ }
+push $Nc57ca800
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.2
+  time ""
+  name TimeOffset8
+  xpos 423
+  ypos 350
+ }
+push $Nc57ca800
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge21
+  xpos 423
+  ypos 427
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply21
+  xpos 417
+  ypos 566
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset -0.9
+  name VectorBlur8
+  xpos 417
+  ypos 919
+ }
+push $Nc57ca800
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset -0.1
+  time ""
+  name TimeOffset9
+  xpos 1027
+  ypos 358
+ }
+push $Nc57ca800
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge22
+  xpos 1027
+  ypos 391
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply22
+  xpos 1033
+  ypos 561
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset -0.3
+  name VectorBlur5
+  xpos 1049
+  ypos 933
+ }
+push 0
+push $Nc57ca800
+ TimeOffset {
+  rounding_mode "Fractional time"
+  time_offset 0.1
+  time ""
+  name TimeOffset10
+  xpos 577
+  ypos 352
+ }
+push $Nc57ca800
+ Merge2 {
+  inputs 2
+  operation plus
+  Achannels motion
+  Bchannels motion
+  output motion
+  name Merge23
+  xpos 577
+  ypos 422
+ }
+ Multiply {
+  channels motion
+  value {{parent.Multiply24.value}}
+  name Multiply23
+  xpos 571
+  ypos 552
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  offset -0.7
+  name VectorBlur7
+  xpos 571
+  ypos 911
+ }
+push $Nc57ca800
+ Multiply {
+  channels motion
+  value 4
+  name Multiply24
+  xpos 826
+  ypos 737
+ }
+ VectorBlur {
+  uv motion
+  scale 0.1
+  name VectorBlur6
+  xpos 855
+  ypos 932
+ }
+ Merge2 {
+  inputs 11+1
+  operation plus
+  also_merge motion
+  name Merge24
+  xpos 855
+  ypos 1291
+ }
+ Multiply {
+  value 0.090909
+  name Multiply25
+  xpos 855
+  ypos 1414
+ }
+ Remove {
+  operation keep
+  channels rgba
+  name Remove13
+  xpos 855
+  ypos 1527
+ }
+ Output {
+  name Output1
+  xpos 855
+  ypos 1608
+ }
+end_group
+Crop {
+ box {0 0 2048 1556}
+ reformat true
+ crop false
+ name Crop1
+ xpos 1250
+ ypos 895
+}
+Dot {
+ name Dot12
+ xpos 1284
+ ypos 936
+}
+Merge2 {
+ inputs 2
+ operation difference
+ name Merge2
+ xpos 1084
+ ypos 933
+}
+Grade {
+ multiply 10
+ name Grade1
+ xpos 1084
+ ypos 985
+}
+Dot {
+ name Dot13
+ xpos 1118
+ ypos 1040
+}
+FrameHold {
+ firstFrame 1
+ name FrameHold1
+ xpos 1264
+ ypos 1031
+}
+Viewer {
+ frame 10
+ frame_range 1-100
+ monitorOutNDISenderName "NukeX - curvedMBsetup.v002 - Viewer1"
+ monitorOutOutputTransform rec709
+ name Viewer1
+ xpos 177
+ ypos 1197
+}
